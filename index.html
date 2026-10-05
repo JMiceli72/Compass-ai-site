@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compass AI — Your resume will fly</title>
+<meta name="description" content="Compass AI matches your resume to real job openings in your trade — nothing else. Join the founding pilot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0F1A17; --paper:#F6F3EC; --card:#FFFFFF;
+    --compass-blue:#1F4B43; --signal:#2E8B6F; --gold:#D98A2B;
+    --line:#E3DDCB; --muted:#5C6B64;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.5;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;margin:0 0 .4em;letter-spacing:-0.01em;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+  a{color:inherit;}
+
+  header{padding:20px 0;}
+  .nav{display:flex;align-items:center;justify-content:space-between;}
+  .brand{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--signal);}
+
+  .hero{padding:40px 0 60px;}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;}
+  @media (max-width:760px){.hero-grid{grid-template-columns:1fr;}}
+  .eyebrow{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);font-weight:600;margin-bottom:14px;}
+  h1{font-size:2.6rem;line-height:1.08;}
+  @media (max-width:500px){h1{font-size:2rem;}}
+  .tagline-es{color:var(--muted);font-style:italic;margin-top:6px;font-size:1rem;}
+  .lede{margin-top:18px;font-size:1.05rem;color:var(--ink);max-width:46ch;}
+  .cta-row{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{display:inline-block;padding:13px 24px;border-radius:7px;font-weight:600;text-decoration:none;font-size:.95rem;}
+  .btn-primary{background:var(--compass-blue);color:#fff;}
+  .btn-ghost{border:1.5px solid var(--line);color:var(--ink);}
+  .hero-art{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;}
+  .hero-art img{border-radius:8px;}
+  .hero-art figcaption{margin-top:10px;font-size:.82rem;color:var(--muted);text-align:center;}
+
+  .boundaries{background:var(--compass-blue);color:#EDEFE9;padding:56px 0;}
+  .boundaries h2{color:#fff;font-size:1.7rem;}
+  .boundaries p{max-width:58ch;color:#C9D3CC;}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px;}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr;}}
+  .feature{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:10px;padding:20px;}
+  .feature .tag{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  .feature h3{font-size:1.05rem;margin-top:8px;color:#fff;}
+  .feature p{color:#C9D3CC;font-size:.92rem;margin:8px 0 0;}
+
+  .pilot{padding:64px 0;}
+  .pilot-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;}
+  @media (max-width:760px){.pilot-grid{grid-template-columns:1fr;}}
+  .pilot-copy img{border-radius:10px;margin-bottom:18px;}
+  .pilot-copy ul{padding-left:1.1em;color:var(--muted);}
+  .pilot-copy li{margin-bottom:6px;}
+
+  form{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px;}
+  label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px;}
+  label:first-child{margin-top:0;}
+  input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:7px;font-size:.95rem;font-family:inherit;background:#FCFBF7;}
+  input:focus,select:focus{outline:2px solid var(--signal);outline-offset:1px;}
+  .submit{margin-top:20px;width:100%;background:var(--signal);color:#fff;border:none;padding:13px;border-radius:7px;font-weight:600;font-size:1rem;cursor:pointer;}
+  .submit:hover{background:#267a62;}
+  .fineprint{font-size:.78rem;color:var(--muted);margin-top:12px;}
+  .success{display:none;background:#E7F3EC;border:1px solid var(--signal);color:#1F4B43;padding:14px;border-radius:8px;font-size:.92rem;margin-top:16px;}
+
+  footer{padding:30px 0 50px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="nav">
+    <div class="brand"><span class="dot"></span> Compass AI</div>
+    <a href="#pilot" class="btn btn-ghost" style="padding:9px 16px;">Join the pilot</a>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Founding Pilot — now enrolling</div>
+      <h1>Your resume will fly with Compass AI.</h1>
+      <div class="tagline-es">¡Tu currículum volará con Compass AI!</div>
+      <p class="lede">Compass AI matches your resume to real openings in your trade — not a flood of jobs that don't fit. Set your skills once. Only hear about the ones worth your time.</p>
+      <div class="cta-row">
+        <a href="#pilot" class="btn btn-primary">Join the founding pilot</a>
+        <a href="#boundaries" class="btn btn-ghost">How it works</a>
+      </div>
+    </div>
+    <figure class="hero-art">
+      <img src="johnny-maria-duo-portrait.png" alt="Johnny and Maria, the Compass AI guides">
+      <figcaption>Johnny &amp; Maria — your Compass AI guides</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="boundaries" id="boundaries">
+  <div class="wrap">
+    <h2>Job Boundaries. You set them once.</h2>
+    <p>Most job sites send you everything. Compass AI only sends you what matches — your trade, your skills, your terms.</p>
+    <div class="grid3">
+      <div class="feature">
+        <div class="tag">Job Boundaries</div>
+        <h3>Only real matches</h3>
+        <p>Set your trade and skill set once. Compass AI filters out everything that doesn't genuinely fit — no more digging through noise.</p>
+      </div>
+      <div class="feature">
+        <div class="tag">Career Locker</div>
+        <h3>Everything in one place</h3>
+        <p>Resumes, certifications, and references live in your Career Locker. Compass AI preps your applications — you approve before anything sends.</p>
+      </div>
+      <div class="feature">
+        <div class="tag">Career Command Center</div>
+        <h3>One dashboard</h3>
+        <p>Track every match, every application, and your state's minimum wage guide — all from a single home base.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pilot wrap" id="pilot">
+  <div class="pilot-grid">
+    <div class="pilot-copy">
+      <img src="johnny-jobs-founding-pilot-final.jpg" alt="Johnny Jobs — Compass AI founding pilot">
+      <h2>Join the founding pilot</h2>
+      <p class="lede" style="margin-top:0;">Be one of the first through the door. Founding members help shape Compass AI and get early access before the public launch.</p>
+      <ul>
+        <li>Early access to resume matching</li>
+        <li>Direct input on what we build next</li>
+        <li>No cost to join the pilot</li>
+      </ul>
+    </div>
+
+    <div>
+      <form id="pilotForm">
+        <p style="display:none;"><label>Don't fill this out: <input name="company"></label></p>
+
+        <label for="name">Full name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="trade">Trade or skill set</label>
+        <input id="trade" name="trade" type="text" placeholder="e.g. electrician, warehouse, SAG performer" required>
+
+        <label for="location">City / State</label>
+        <input id="location" name="location" type="text" required>
+
+        <label for="lang">Preferred language</label>
+        <select id="lang" name="lang">
+          <option value="English">English</option>
+          <option value="Español">Español</option>
+        </select>
+
+        <button type="submit" class="submit">Join the founding pilot</button>
+        <p class="fineprint">We'll only use this to reach out about Compass AI. No spam, no resale of your info.</p>
+        <div class="success" id="successMsg">You're in. Watch your email — we'll be in touch as the pilot opens up.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  Compass AI · getcompassjobs.com
+</footer>
+
+<script>
+  const form = document.getElementById('pilotForm');
+  const success = document.getElementById('successMsg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (form.company.value) return; // honeypot caught a bot, do nothing
+    const payload = {
+      name: form.name.value, email: form.email.value, trade: form.trade.value,
+      location: form.location.value, lang: form.lang.value
+    };
+    fetch('/api/signup', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+      .then(r => r.json())
+      .then(data => {
+        if (data.ok) { form.style.display = 'none'; success.style.display = 'block'; }
+        else { alert(data.error || 'Something went wrong. Please try again.'); }
+      })
+      .catch(() => alert('Could not reach the server. Please try again in a moment.'));
+  });
+</script>
+
+</body>
+</html
